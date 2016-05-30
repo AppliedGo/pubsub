@@ -34,10 +34,9 @@ PubSub is a communication topology where a single entity called Publisher produc
 
 This sounds much like some news service sending articles out to readers, and in fact many news services work this way. Whether you subscribe to an RSS feed via an RSS aggregator, to one or more forums on a discussions platform, or follow someone on Twitter--in each case, there is one publisher and multiple subscribers involved.
 
-This animation illustrates the concept:
+This picture illustrates the concept:
 
-HYPE[PubSub](PubSub.html)
-
+![PubSub topology](TopoPubSub.png)
 
 ### Where can a PubSub topology be used?
 
@@ -59,6 +58,11 @@ Subscription strategies can differ based on the system architecture.
 ### How Mangos implements the PubSub protocol
 
 As seen in the Pair example in the previous article, Mangos uses special, protocol-aware sockets. In a PubSub scenario, the "pub" socket just sends out its messages to all receivers (or to nirvana if no one is listening). The "sub" socket is able to filter the incoming messages by topic and only delivers the messages that match one of the subscribed topics.
+
+The animation below shows the Mangos approach - the publisher sends all messages to all subscribers, and the subscribers filter the messages according to the topics they have subscribed to:
+
+HYPE[PubSub](PubSub.html)
+
 
 This is certainly a rather simple and robust approach, as the server does not need to manage the clients and their subscriptions; on the downside, as noted above, filtering on client side does not scale well with the number of clients.
 
