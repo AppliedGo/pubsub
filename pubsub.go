@@ -32,11 +32,10 @@ The Publisher-Subscriber model in a nutshell
 
 PubSub is a communication topology where a single entity called Publisher produces messages that it sends out to other entities called Subscribers. Subscribers may receive everything the publisher sends, or they may subscribe to message subsets called Topics.
 
-This sounds much like some news service sending articles out to readers, and in fact many news services work this way. Whether you subscribe to an RSS feed via an RSS aggregator, to one or more forums on a discussions platform, or follow someone on Twitter--in each case, there is one publisher and multiple subscribers involved.
-
-This picture illustrates the concept:
-
 ![PubSub topology](TopoPubSub.png)
+
+This sounds much like some news service sending articles out to readers, and in fact many news services work this way. Whether you subscribe to an RSS feed, to one or more forums on a discussions platform, or follow someone on Twitter--in each case, there is one publisher and multiple subscribers involved.
+
 
 ### Where can a PubSub topology be used?
 
