@@ -99,11 +99,11 @@ import (
 
 	// For this example, we need the PUBSUB protocol as well as the ipc and tcp transports.
 	// Unlike the PAIR protocol, PUBSUB actually consists of two protocols, PUB and SUB.
-	"github.com/gdamore/mangos"
-	"github.com/gdamore/mangos/protocol/pub"
-	"github.com/gdamore/mangos/protocol/sub"
-	"github.com/gdamore/mangos/transport/ipc"
-	"github.com/gdamore/mangos/transport/tcp"
+	"github.com/go-mangos/mangos"
+	"github.com/go-mangos/mangos/protocol/pub"
+	"github.com/go-mangos/mangos/protocol/sub"
+	"github.com/go-mangos/mangos/transport/ipc"
+	"github.com/go-mangos/mangos/transport/tcp"
 )
 
 // newPublisherSocket creates a new pub socket from the passed-in URL, and starts
@@ -274,3 +274,20 @@ func main() {
 		fmt.Println("Client", os.Args[1], "ends.")
 	}
 }
+
+/*
+Get this code from github:
+
+	go get -d github.com/appliedgo/pubsub
+	cd $GOPATH/src/github.com/appliedgo/pubsub
+	go build
+	./pubsub
+
+(`go get -d` gets the code but does not install it into `$GOPATH/bin`. go build then builds the executable locally so that it would not end up between your other executables, especially if $GOPATH/bin is part of your $PATH.)
+
+As you have seen in the code for main(), the program spawns three child processes that take over the role of the clients. If everything works fine, you should then see the publisher send 15 messages to the clients, and the clients should then grab only the messages that they have subscribed to.
+
+For additional fun, try tweaking some parameters. For example, comment out the last `time.Sleep()` statement in main(). Or have the clients expect more messages than the server sends, and see what happens!
+
+Have fun!
+*/
