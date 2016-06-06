@@ -12,7 +12,7 @@ whose licenses are provided in the respective license files.
 title = "Message Queues Part 2: The PubSub Protocol"
 description = "How to implement the publisher-subscriber protocol with nanomsg, Mangos, and Go."
 author = "Christoph Berger"
-email = "chris@appliedgo.com"
+email = "chris@appliedgo.net"
 date = "2016-06-02"
 publishdate = "2016-06-02"
 domains = ["Distributed Computing"]
