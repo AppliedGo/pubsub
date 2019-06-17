@@ -15,9 +15,9 @@ author = "Christoph Berger"
 email = "chris@appliedgo.net"
 date = "2016-06-02"
 publishdate = "2016-06-02"
-domains = ["Distributed Computing"]
+categories = ["Distributed Computing"]
 tags = ["Messaging", "Mangos", "PubSub"]
-categories = ["Tutorial"]
+articletypes = ["Tutorial"]
 +++
 
 This is the second (and, for the time being, the last) article about messaging and Mangos. After doing first steps with the Pair protocol, we now look into a slightly more complex protocol, the Publisher-Subscriber (or PubSub) protocol.
